@@ -1,30 +1,76 @@
 class user_interface:
-    import tkinter as tk
-    from tkinter import font as tkFont
-    from functools import partial
-    import matplotlib.pylab as plt
-    from matplotlib.backends.backend_tkagg import NavigationToolbar2Tk
-    from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
     
+    import tkinter as tk
+    import os
     #window
     tkWindow = tk.Tk()  
     tkWindow.geometry('1600x900')  
     tkWindow.title('Schneider Crop Manager')
     tkWindow.resizable(True, True)
     
-    my_font = tkFont.Font(family='Helvetica', size=36)
-    pixelVirtual = tk.PhotoImage(width=1, height=1)
+    screen_width = tkWindow.winfo_screenwidth()
+    screen_height = tkWindow.winfo_screenheight()
     
-    input_frame = tk.Frame(tkWindow, width = 1600, height = 700, bd = 0, highlightbackground = "black", highlightcolor = "black", highlightthickness = 1)
-    input_frame.pack(side = tk.TOP, anchor=tk.NW)
-
-    button1=tk.Button(tkWindow, text="Temperature", height = 195, width = 395, font = my_font, image=pixelVirtual)
-    button1.place(x=400, y=700)
+    window_width = 1600
+    window_height = 900
     
-    button2=tk.Button(tkWindow, text="Calender", height = 195, width = 395, font = my_font, image=pixelVirtual)
-    button2.place(x=800, y=700)
+    x_cordinate = int((screen_width/2) - (window_width/2))
+    y_cordinate = int((screen_height/2) - (window_height/2))
     
-    button3=tk.Button(tkWindow, text="Notes", height = 195, width = 395, font = my_font, image=pixelVirtual)
-    button3.place(x=1200, y=700)
+    tkWindow.geometry('%dx%d+%d+%d' % (window_width, window_height, x_cordinate, y_cordinate))
     
+    
+    # if no location is given, get location    
+    if (os.stat("data.txt").st_size == 0):
+        
+        location_Window = tk.Toplevel(tkWindow)  
+        location_Window.geometry('200x80')  
+        location_Window.title('Location Request')
+        tkWindow.eval(f'tk::PlaceWindow {str(location_Window)} center')
+        
+        Label = tk.Label(location_Window, text="Please enter your Location:").grid(row=0, columnspan=2)
+        # get country
+        user_country_Label = tk.Label(location_Window, text="Country:").grid(row=1, column=0)
+        user_country = tk.StringVar()
+        user_country_Entry = tk.Entry(location_Window, textvariable=user_country).grid(row=1, column=1, sticky='W') 
+        # get zip code
+        user_zip_Label = tk.Label(location_Window, text="ZIP-Code:").grid(row=2, column=0)
+        user_zip = tk.StringVar()
+        user_zip_Entry = tk.Entry(location_Window, textvariable=user_zip).grid(row=2, column=1, sticky='W')
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        
     tkWindow.mainloop()
+        
+                
+                
+                
+
+
+
+
+
