@@ -1,4 +1,4 @@
-class crop_calendar:
+class Crop_calendar:
     
     import calendar
     import datetime
