@@ -3,9 +3,9 @@ Uni Project (Projektmanagement and Software-Engineering)
 
 <hr>
 
-# Finished
+# Features
 
-- Login UI
+- Weather Download via worldweatheronline.com (wwo_hist by Ekapope Viriyakovithya (ekapope.github.io/))
 
 
 

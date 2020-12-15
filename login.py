@@ -1,6 +1,7 @@
 import tkinter as tk
 from functools import partial
 import os
+from tkinter.messagebox import showinfo
 
     
 
@@ -9,7 +10,6 @@ def validate_Login(username, password):
     password = password.get()
     
     if ((not username) | (not password)):
-        from tkinter.messagebox import showinfo
         showinfo("Window", "Please type in Username and Password")
         return
     
@@ -46,6 +46,7 @@ def validate_Login(username, password):
             
             # open user interface and continue
             tkWindow.destroy()
+            
             from user_interface import User_interface
             User_interface(username)
             
@@ -55,7 +56,6 @@ def validate_Login(username, password):
         my_file = "accounts//" + username + "_account//" + username + "_login"
         # wrong username
         if (not os.path.isfile(my_file)):
-            from tkinter.messagebox import showinfo
             showinfo("Window", "Wrong Username")
         
         # username exists -> check password   

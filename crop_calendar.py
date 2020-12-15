@@ -9,3 +9,6 @@ class Crop_calendar:
         
     x = datetime.datetime.now()
     print(x.strftime("%d %B %Y \n%A"))
+    
+    from weather import Weather
+    Weather.get_weather_data()
