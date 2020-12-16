@@ -37,16 +37,20 @@ class User_interface:
             tkWindow.eval(f'tk::PlaceWindow {str(location_Window)} center')
             
             Label = tk.Label(location_Window, text="Please enter your Location:").grid(row=0, columnspan=2)
-            # get country
-            user_country_Label = tk.Label(location_Window, text="Country:").grid(row=1, column=0)
+            # get name
+            user_country_Label = tk.Label(location_Window, text="City Name:").grid(row=1, column=0)
             user_country = tk.StringVar()
             user_country_Entry = tk.Entry(location_Window, textvariable=user_country).grid(row=1, column=1, sticky='W') 
-            # get zip code
-            user_zip_Label = tk.Label(location_Window, text="ZIP-Code:").grid(row=2, column=0)
-            user_zip = tk.StringVar()
-            user_zip_Entry = tk.Entry(location_Window, textvariable=user_zip).grid(row=2, column=1, sticky='W')
+            # get x coordinate
+            user_x_Label = tk.Label(location_Window, text="Longitude:").grid(row=2, column=0)
+            user_x = tk.StringVar()
+            user_x_Entry = tk.Entry(location_Window, textvariable=user_x).grid(row=2, column=1, sticky='W')
+            # get y coordinate
+            user_y_Label = tk.Label(location_Window, text="Latitude:").grid(row=3, column=0)
+            user_y = tk.StringVar()
+            user_y_Entry = tk.Entry(location_Window, textvariable=user_x).grid(row=3, column=1, sticky='W')
             
-            loginButton = tk.Button(location_Window, text="Get Location Data", command=get_Location).grid(row=3, column=0, columnspan = 2) 
+            loginButton = tk.Button(location_Window, text="Get Location Data", command=get_Location).grid(row=4, column=0, columnspan = 2) 
             new_acc = tk.IntVar()
     
     

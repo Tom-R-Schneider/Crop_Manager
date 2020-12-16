@@ -1,6 +1,8 @@
 class Weather:
     # https://www.freecodecamp.org/news/obtain-historical-weather-forecast-data-in-csv-format-using-python/ 
     def get_weather_data(self, name, x, y):
+        
+        # Weather Download via worldweatheronline.com (wwo_hist by Ekapope Viriyakovithya (ekapope.github.io/))
         from wwo_hist import retrieve_hist_data
         import os
         import urllib.request
@@ -11,7 +13,7 @@ class Weather:
         START_DATE = '01-JAN-2010'
         END_DATE = '31-DEC-2019'
         API_KEY = '6ad530555d2e4309bda205906201412'
-        LOCATION_LIST = '49.487,8.466'
+        LOCATION_LIST = [x + "," + y]
         name = name.lower()
         
         hist_weather_data = retrieve_hist_data(API_KEY,
@@ -23,7 +25,4 @@ class Weather:
                                         export_csv = True,
                                         store_df = True)
         
-        os.rename(".\\" + LOCATION_LIST, ".\\" + name)
-        
-test = Weather()
-test.get_weather_data()
+        os.rename(".\\" + ",".join(LOCATION_LIST) + ".csv", ".\\" + name + ".csv")

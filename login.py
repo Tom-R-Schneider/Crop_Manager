@@ -34,16 +34,28 @@ def validate_Login(username, password):
                     showinfo("Window", "Username taken")
            
         else: 
-            os.mkdir(dir)                           
+            os.mkdir(dir)
+            
+            new_dir = dir + "//" + username                           
             
             # write key and encrypted password
-            with open(dir + "//" + username + "_login.txt", "w") as file:
+            with open(new_dir + "_login.txt", "w") as file:
                 file.write("key: " + str(key) + "\npassword: " + str(encrypted_password))
             
-            # make txt file for later use    
-            with open(dir + "//" + username + "_data.txt", "w") as file:
+            # make txt files for later use  
+            with open(new_dir + "_data.txt", "w") as file:
+                pass  
+            with open(new_dir + "_diary.txt", "w") as file:
                 pass
             
+            with open(new_dir + "_notes.txt", "w") as file:
+                pass
+            
+            with open(new_dir + "_tasks.txt", "w") as file:
+                pass
+            
+            with open(new_dir + "_field.txt", "w") as file:
+                pass
             # open user interface and continue
             tkWindow.destroy()
             

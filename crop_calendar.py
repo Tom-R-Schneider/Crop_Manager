@@ -11,4 +11,4 @@ class Crop_calendar:
     print(x.strftime("%d %B %Y \n%A"))
     
     from weather import Weather
-    Weather.get_weather_data()
+    Weather.get_weather_data(Weather,"heidelberg", "49.402", "8.676")
