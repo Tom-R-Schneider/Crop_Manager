@@ -119,7 +119,7 @@ class Weather:
         FREQUENCY = 24
         START_DATE = '01-JAN-2010'
         END_DATE = "{0:0=2d}".format(day) + "-" + month_list[month-1] + "-" + str(year) 
-        API_KEY = '6ad530555d2e4309bda205906201412'
+        API_KEY = 'API_KEY'
         LOCATION_LIST = [x + "," + y]
         name = name.lower()
         
