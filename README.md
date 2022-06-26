@@ -14,5 +14,3 @@ Uni Project (Projektmanagement and Software-Engineering)
 - Location input
 - Yearly Calc
 - Temperature Plotting
-
-# How to startc Application
