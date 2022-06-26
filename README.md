@@ -6,12 +6,6 @@ Uni Project (Projektmanagement and Software-Engineering)
 # Features
 
 - Weather Download via worldweatheronline.com (wwo_hist by Ekapope Viriyakovithya (ekapope.github.io/))
-
-
-
-
-# Work in Progress
-
 - User Interface
 - Login Check
 - Calender
@@ -20,6 +14,4 @@ Uni Project (Projektmanagement and Software-Engineering)
 - Location input
 - Yearly Calc
 - Temperature Plotting
-- Area Input and Visualization
-- Multiple Languages (?)
 
