@@ -15,3 +15,4 @@ Uni Project (Projektmanagement and Software-Engineering)
 - Yearly Calc
 - Temperature Plotting
 
+# How to startc Application
